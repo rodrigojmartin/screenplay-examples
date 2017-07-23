@@ -4,9 +4,6 @@ import com.testingar.screenplay.pages.HomePage;
 import com.testingar.screenplay.pages.SearchResultPage;
 import net.thucydides.core.annotations.Step;
 
-import java.util.List;
-
-
 public class BuyerSteps {
 
     HomePage homePage;
@@ -23,8 +20,8 @@ public class BuyerSteps {
     }
 
     @Step
-    public void should_only_see_items_related_to(String keywords) {
-        List<String> resultTitles = searchResultsPage.getResultTitles();
+    public boolean should_only_see_items_related_to(String keywords) {
+        return (searchResultsPage.resultShouldContain(keywords));
     }
 
 
