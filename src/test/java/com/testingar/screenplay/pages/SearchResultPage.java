@@ -4,15 +4,16 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 public class SearchResultPage extends PageObject {
 
-    @FindBy(css=".listing-card")
-    List<WebElement> listingCards;
+    @FindBy(css = "h2#s-result-count")
+    WebElement resultsCount;
 
-    public List<String> getResultTitles() {
-
-        return null;
+    public boolean resultShouldContain(String keyword) {
+        if (resultsCount.getText().contains(keyword)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
