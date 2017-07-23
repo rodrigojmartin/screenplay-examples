@@ -18,15 +18,15 @@ public class SearchByKeywordStepsDefinition {
     }
 
 
-    @When("^he search for items containing Sega$")
-    public void he_search_for_items_containing_Sega() throws Throwable {
-        buyer.search_for_items_containing("Sega");
+    @When("^he search for items containing (.*)$")
+    public void he_search_for_items_containing(String keywords) throws Throwable {
+        buyer.search_for_items_containing(keywords);
     }
 
-    @Then("^he should only see items related to Sega$")
-    public void he_should_only_see_items_related_to_Sega() throws Throwable {
+    @Then("^he should only see items related to (.*)$")
+    public void he_should_only_see_items_related_to_Sega(String keywords) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        buyer.should_only_see_items_related_to("Sega");
+        buyer.should_only_see_items_related_to(keywords);
     }
 
 }
