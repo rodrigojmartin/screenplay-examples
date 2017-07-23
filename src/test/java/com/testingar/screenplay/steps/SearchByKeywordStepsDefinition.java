@@ -5,6 +5,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
+ import static org.junit.Assert.assertTrue;
+
 
 public class SearchByKeywordStepsDefinition {
 
@@ -26,7 +28,7 @@ public class SearchByKeywordStepsDefinition {
     @Then("^he should only see items related to (.*)$")
     public void he_should_only_see_items_related_to_Sega(String keywords) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        buyer.should_only_see_items_related_to(keywords);
+        assertTrue(buyer.should_only_see_items_related_to(keywords));
     }
 
 }
