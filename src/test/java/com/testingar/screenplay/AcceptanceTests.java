@@ -10,6 +10,4 @@ import org.openqa.selenium.WebDriver;
 @CucumberOptions(features="src/test/resources/features")
 
 public class AcceptanceTests {
-    @Managed(driver="chrome")
-    WebDriver driver;
 }
