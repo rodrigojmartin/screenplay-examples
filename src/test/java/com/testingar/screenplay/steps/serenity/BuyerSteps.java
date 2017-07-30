@@ -16,7 +16,7 @@ public class BuyerSteps {
 
     @Step
     public void search_for_items_containing(String keywords) {
-        homePage.searchFor(keywords);
+
     }
 
     @Step
