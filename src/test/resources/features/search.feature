@@ -1,10 +1,9 @@
 Feature: Search by keyword
-  In order for buyers to find what they are looking for more efficiently
-  As a seller
-  I want buyers to be able to search for articles by keywords
+   As a videogame collectionist
+   I want to be able to search vintage consoles
 
-  Scenario: Search for articles by keyword
+  Scenario: Search vintage consoles by keyword
 
     Given that richard wants to buy cool stuff in Amazon
-    When he search for items containing Sega Genesis
+    When he searches for items containing Sega Genesis
     Then he should only see items related to Video Games
