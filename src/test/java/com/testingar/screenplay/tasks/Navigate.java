@@ -21,7 +21,7 @@ public class Navigate implements Task {
         );
     }
 
-    public static Performable to(Section section) {
+    public static Performable to(String site) {
         return instrumented(Navigate.class);
     }
 }
