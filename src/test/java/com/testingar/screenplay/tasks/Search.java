@@ -13,16 +13,14 @@ import org.openqa.selenium.Keys;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-/**
- * Created by Rodrigo on 7/25/17.
- */
+
 public class Search implements Task {
 
        private final String keywords;
 
         public Search(String keywords) {
-        this.keywords = keywords;
-    }
+             this.keywords = keywords;
+        }
 
         @Override
         @Step("{0} search by #keywords")
@@ -37,4 +35,5 @@ public class Search implements Task {
             return instrumented(Search.class, keywords);
         }
 }
+
 
