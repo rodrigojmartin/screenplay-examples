@@ -1,7 +1,6 @@
 package com.testingar.screenplay.steps;
 import com.testingar.screenplay.model.Section;
 import com.testingar.screenplay.questions.TheResults;
-import com.testingar.screenplay.steps.serenity.BuyerSteps;
 import com.testingar.screenplay.tasks.Navigate;
 import com.testingar.screenplay.tasks.Search;
 import cucumber.api.java.Before;
@@ -24,8 +23,6 @@ public class SearchByKeywordStepsDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Steps
-    BuyerSteps buyer;
 
     @Given("^that (.*) wants to buy cool stuff in Amazon$")
     public void wants_to_buy_cool_stuff_in_Amazon(String personaName) throws Throwable {
