@@ -1,5 +1,4 @@
 package com.testingar.screenplay.steps;
-import com.testingar.screenplay.model.Section;
 import com.testingar.screenplay.questions.TheResults;
 import com.testingar.screenplay.tasks.Navigate;
 import com.testingar.screenplay.tasks.Search;
@@ -9,7 +8,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.thucydides.core.annotations.Steps;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -27,7 +25,7 @@ public class SearchByKeywordStepsDefinition {
     @Given("^that (.*) wants to buy cool stuff in Amazon$")
     public void wants_to_buy_cool_stuff_in_Amazon(String personaName) throws Throwable {
         theActorCalled(personaName).attemptsTo(
-                Navigate.to(Section.Amazon)
+                Navigate.to("Amazon")
         );
     }
 
