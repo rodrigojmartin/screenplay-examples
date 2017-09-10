@@ -4,6 +4,6 @@ Feature: Search by keyword
 
   Scenario: Search vintage consoles by keyword
 
-    Given that richard wants to buy cool stuff in Amazon
+    Given that Richard wants to buy cool stuff in Amazon
     When he searches for items containing Sega Genesis
     Then he should only see items related to Video Games
