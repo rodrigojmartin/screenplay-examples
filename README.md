@@ -5,6 +5,6 @@ Execute tests with:
 
 `mvn clean verify`
 
-Specify a different browser by passing webdriver.driver as parameters:
+Specify a different browser by passing webdriver.driver as parameter:
 
 `mvn clean verify -Dwebdriver.driver=chrome`
